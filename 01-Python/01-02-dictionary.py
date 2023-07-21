@@ -68,14 +68,14 @@ else:
 # examples
 text = "I like a pizza, I like a cola, I like a sugar, I like a hamburger."
 
-    # 1. pre-processing phase
+##### 1. pre-processing phase
 import re
 text = re.sub(",", " ", text)     # text에서 ","(반점)을 " "(띄어쓰기)로 바꿔주세요.
 text = re.sub("\.", " . ", text)  # text에서 "."(온점)을 " . "(띄어쓰기가 포함된 온점)으로 바꿔주세요.
 text = re.sub("\s+", " ", text)   # text에서 "\s+"(2칸이상 띄워진 부분)을 " "(한칸 띄어쓰기)로 바꿔주세요.
 print(text) # I like a pizza I like a cola I like a sugar I like a hamburger .
 
-    # 2. Vocab phase
+##### 2. Vocab phase
 text = text.strip().split(" ")
                                 # text의 양 끝부분에 쓸모없는 공백을 제거(strip)하고,
                                 # " "(띄어쓰기)가 되어있는 부분으로 잘라서(split) list로 만들어주세요.
